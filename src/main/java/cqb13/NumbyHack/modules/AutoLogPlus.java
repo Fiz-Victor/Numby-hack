@@ -1,4 +1,4 @@
-package cqb13.NumbyHack.modules.general;
+package cqb13.NumbyHack.modules;
 
 import cqb13.NumbyHack.NumbyHack;
 import meteordevelopment.meteorclient.events.world.TickEvent;
@@ -162,7 +162,6 @@ public class AutoLogPlus extends Module {
                     disconnect(Text.of("[Auto Log+] A non trusted player ["+ entity.getEntityName() +"] has entered your render distance."));
                 }
             }
-
         }
     }
 

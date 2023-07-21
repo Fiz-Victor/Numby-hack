@@ -1,4 +1,4 @@
-package cqb13.NumbyHack.modules.general;
+package cqb13.NumbyHack.modules;
 
 import cqb13.NumbyHack.NumbyHack;
 import meteordevelopment.meteorclient.events.game.ReceiveMessageEvent;
@@ -8,7 +8,6 @@ import meteordevelopment.meteorclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.settings.StringListSetting;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.orbit.EventHandler;
-import net.minecraft.text.Text;
 
 import java.util.List;
 
@@ -43,28 +42,22 @@ public class IgnoreDeaths extends Module {
 
     @EventHandler
     private void onMessageReceive(ReceiveMessageEvent event) {
-        Text message = event.getMessage();
-
-        if (message == null) return;
-
-        message = Text.of(message.getString().toLowerCase());
+        String msg = event.getMessage().getString().toLowerCase();
 
         if (mustContainWords.get()) {
             for (String name : names.get()) {
                 for (String word : blockedWords.get()) {
-                    if (message.getString().contains(name) && message.getString().contains(word.toLowerCase())) {
+                    if (msg.contains(name) && msg.contains(word.toLowerCase())) {
                         event.cancel();
                     }
                 }
             }
         } else {
             for (String name : names.get()) {
-                if (message.getString().contains(name)) {
+                if (msg.contains(name)) {
                     event.cancel();
                 }
             }
         }
-
-        event.setMessage(message);
     }
 }

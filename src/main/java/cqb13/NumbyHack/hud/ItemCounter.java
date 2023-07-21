@@ -1,4 +1,4 @@
-package cqb13.NumbyHack.modules.hud;
+package cqb13.NumbyHack.hud;
 
 import cqb13.NumbyHack.NumbyHack;
 import meteordevelopment.meteorclient.settings.*;

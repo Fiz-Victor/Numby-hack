@@ -1,4 +1,4 @@
-package cqb13.NumbyHack.modules.general;
+package cqb13.NumbyHack.modules;
 
 import cqb13.NumbyHack.NumbyHack;
 import meteordevelopment.meteorclient.events.render.Render2DEvent;
@@ -16,7 +16,6 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.passive.AbstractHorseEntity;
 import net.minecraft.entity.passive.LlamaEntity;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.Vec3d;
 import org.joml.Vector3d;
 
 import java.util.Objects;

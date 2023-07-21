@@ -1,6 +1,6 @@
 package cqb13.NumbyHack.mixins;
 
-import cqb13.NumbyHack.modules.general.GameSettings;
+import cqb13.NumbyHack.modules.GameSettings;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import net.minecraft.client.gui.screen.DeathScreen;
 import net.minecraft.text.Text;
@@ -21,7 +21,7 @@ public abstract class DeathScreenMixin {
 
     @Inject(method = "init", at = @At("TAIL"))
     private void removeScore(CallbackInfo ci) {
-        if (Modules.get().get(GameSettings.class).toggleHideScore())
+        if (Modules.get().get(GameSettings.class).hideScore())
             scoreText = Text.empty();
     }
 

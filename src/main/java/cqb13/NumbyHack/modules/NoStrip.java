@@ -1,4 +1,4 @@
-package cqb13.NumbyHack.modules.general;
+package cqb13.NumbyHack.modules;
 
 import cqb13.NumbyHack.NumbyHack;
 import meteordevelopment.meteorclient.events.entity.player.InteractBlockEvent;

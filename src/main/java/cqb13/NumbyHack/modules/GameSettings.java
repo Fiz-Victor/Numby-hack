@@ -1,11 +1,10 @@
-package cqb13.NumbyHack.modules.general;
+package cqb13.NumbyHack.modules;
 
 import cqb13.NumbyHack.NumbyHack;
 import meteordevelopment.meteorclient.settings.BoolSetting;
 import meteordevelopment.meteorclient.settings.Setting;
 import meteordevelopment.meteorclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.player.ChatUtils;
 
 /**
  * made by cqb13
@@ -73,36 +72,25 @@ public class GameSettings extends Module {
 
     private void toggleHUD(Boolean b) {
         mc.options.hudHidden = b;
-        sendChatInfo("HUD", b ? "hidden" : "shown");
     }
 
     private void togglePauseOnLostFocus(Boolean b) {
         mc.options.pauseOnLostFocus = b;
-        sendChatInfo("Pause on Lost Focus", b ? "enabled" : "disabled");
     }
 
     private void toggleSkipMultiplayerWarning(Boolean b) {
         mc.options.skipMultiplayerWarning = b;
-        sendChatInfo("Skip Multiplayer Warning", b ? "enabled" : "disabled");
     }
 
     private void toggleSmoothCamera(Boolean b) {
         mc.options.smoothCameraEnabled = b;
-        sendChatInfo("Smooth Camera", b ? "enabled" : "disabled");
     }
 
     private void toggleAdvancedTooltips(Boolean b) {
         mc.options.advancedItemTooltips = b;
-        sendChatInfo("Advanced Tooltips", b ? "enabled" : "disabled");
     }
 
-    public boolean toggleHideScore() {
-        sendChatInfo("Hide Score", hideScore.get() ? "enabled" : "disabled");
+    public boolean hideScore() {
         return isActive() && hideScore.get();
-    }
-
-    private void sendChatInfo(String setting, String value) {
-        if (!chatFeedback.get()) return;
-        ChatUtils.info("Set %s to %s.", setting, value);
     }
 }

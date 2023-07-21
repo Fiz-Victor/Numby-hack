@@ -3,14 +3,8 @@
   "package": "cqb13.NumbyHack.mixins",
   "compatibilityLevel": "JAVA_16",
   "client": [
-    "ClientPlayerEntityMixin",
-    "CustomPayloadS2CPacketMixin",
     "DeathScreenMixin",
-    "EntityAccessor",
-    "TotemParticleMixin",
-    "meteor.CrystalAuraAccessor",
-    "meteor.DiscordPresenceMixin",
-    "meteor.BetterChatMixin"
+    "TotemParticleMixin"
   ],
   "injectors": {
     "defaultRequire": 1

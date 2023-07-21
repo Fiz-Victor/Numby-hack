@@ -1,6 +1,6 @@
 package cqb13.NumbyHack.mixins;
 
-import cqb13.NumbyHack.modules.general.Confetti;
+import cqb13.NumbyHack.modules.Confetti;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import net.minecraft.client.particle.AnimatedParticle;
 import net.minecraft.client.particle.SpriteProvider;
