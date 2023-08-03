@@ -3,7 +3,6 @@
   "package": "cqb13.NumbyHack.mixins",
   "compatibilityLevel": "JAVA_16",
   "client": [
-    "DeathScreenMixin",
     "TotemParticleMixin"
   ],
   "injectors": {

@@ -52,20 +52,6 @@ public class GameSettings extends Module {
             .build()
     );
 
-    private final Setting<Boolean> hideScore = sgGeneral.add(new BoolSetting.Builder()
-            .name("hide-score")
-            .description("Hides the score when you die.")
-            .defaultValue(true)
-            .build()
-    );
-
-    private final Setting<Boolean> chatFeedback = sgGeneral.add(new BoolSetting.Builder()
-            .name("chat-feedback")
-            .description("Sends updates in the chat.")
-            .defaultValue(true)
-            .build()
-    );
-
     public GameSettings() {
         super(NumbyHack.CATEGORY, "game-settings", "Allows for easier access to Minecraft's settings and adds some tweaks.");
     }
@@ -88,9 +74,5 @@ public class GameSettings extends Module {
 
     private void toggleAdvancedTooltips(Boolean b) {
         mc.options.advancedItemTooltips = b;
-    }
-
-    public boolean hideScore() {
-        return isActive() && hideScore.get();
     }
 }
